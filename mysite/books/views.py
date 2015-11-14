@@ -61,3 +61,9 @@ def addauthor(request):
 	
 def back(request):
 	return HttpResponse("success!")
+	
+def back(request):
+	return HttpResponse("success!")
+	
+def back(request):
+	return HttpResponse("success!")
