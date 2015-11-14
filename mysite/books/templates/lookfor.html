@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- DW6 -->
+<head>
+<!-- Copyright 2005 Macromedia, Inc. All rights reserved. -->
+<title>图书管理系统</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<link rel="stylesheet" href="mm_training.css" type="text/css" />
+</head>
+<body bgcolor="#64748B">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr bgcolor="yellow">
+	<td width="15" nowrap="nowrap"><img src="mm_spacer.gif" alt="" width="15" height="1" border="0" /></td>
+	<td height="70" colspan="3" class="logo" nowrap="nowrap">广利书屋<span class="tagline">|欢迎您！</span></td>
+	<td width="40">&nbsp;</td>
+	<td width="100%">&nbsp;</td>
+	</tr>
+
+	<tr bgcolor="#FF6600">
+	<td colspan="6"><img src="mm_spacer.gif" alt="" width="1" height="4" border="0" /></td>
+	</tr>
+
+	<tr bgcolor="#D3DCE6">
+	<td colspan="6"><img src="mm_spacer.gif" alt="" width="1" height="1" border="0" /></td>
+	</tr>
+
+	<tr bgcolor="#FFCC00">
+	<td width="15" nowrap="nowrap">&nbsp;</td>
+	<td width="705" colspan="3" height="24">&nbsp;</td>
+	<td width="40">&nbsp;</td>
+	<td width="100%">&nbsp;</td>
+	</tr>
+
+	<tr bgcolor="#D3DCE6">
+	<td colspan="6"><img src="dc986d347634c49a3c610fe148d3b6f8.jpg" alt="" width="1" height="1" border="0" /></td>
+	</tr>
+
+	<tr bgcolor="#FF6600">
+	<td colspan="6"><img src="dc986d347634c49a3c610fe148d3b6f8.jpg" alt="" width="1" height="4" border="0" /></td>
+	</tr>
+
+	<tr bgcolor="#D3DCE6">
+	<td width="230" colspan="2" valign="top" bgcolor="#26354A"><br />
+	<table border="0" cellspacing="0" cellpadding="0" width="230">
+		<tr>
+		<td width="230" class="sidebarText" id="padding"><br />		</td>
+		</tr>
+	</table>	</td>
+	<td width="50" valign="top"><img src="mm_spacer.gif" alt="" width="50" height="1" border="0" /></td>
+	<td width="440" valign="top"><br />
+	<br />
+	<table border="0" cellspacing="0" cellpadding="0" width="440">
+		<tr>
+		<td class="pageName"><p>查找作者</p></td>
+		<a href="../main_book">返回</a></td>
+		</tr>
+
+		<tr>
+		<td class="bodyText">
+<form method = "get">
+<input type = "text" name = "hh">
+<input type = "submit" value = "lookfor">
+</form>
+
+{% if Author %}
+<table>
+<tr><th>作者编号</th><td>&nbsp;</td><th>作者姓名</th><td>&nbsp;</td><th>年龄</th><td>&nbsp;</td><th>国籍</th><th>
+<tr><th>{{Author.AuthorID}}</th><td>&nbsp;</td><th>{{Author.name}}</th><td>&nbsp;</td><th>{{Author.age}}</th><td>&nbsp;</td><th>{{Author.country}}</th><th>
+</table>
+<table>
+<tr><th>ISBN</th><th>书名</th><th>作者</th><th>出版社</th><th>出版日期</th><th>价格</th></tr>
+{% for book in books %}
+<tr><th>{{book.ISBN}}</th><th>{{book.title}}</th><th>{{book.AuthorID}}</th><th>{{book.publisher}}</th><th>{{book.publishdate}}</th><th>{{book.price}}</th></tr>
+{% endfor %}
+</table>
+{% endif %}</td>
+		</tr>
+	</table>
+	<br />
+	&nbsp;<br />	</td>
+	<td width="40">&nbsp;</td>
+	<td width="100%">&nbsp;</td>
+	</tr>
+
+	<tr bgcolor="#D3DCE6">
+	<td colspan="6"><img src="mm_spacer.gif" alt="" width="1" height="1" border="0" /></td>
+	</tr>
+
+	<tr>
+	<td width="15">&nbsp;</td>
+	<td width="215">&nbsp;</td>
+	<td width="50">&nbsp;</td>
+	<td width="440">&nbsp;</td>
+	<td width="40">&nbsp;</td>
+	<td width="100%">&nbsp;</td>
+	</tr>
+</table>
+</body>
+</html>
